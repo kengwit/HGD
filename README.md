@@ -62,8 +62,10 @@ brew install python cmake libomp
 
 3. **Verify installation:**
    ```bash
-   python -c "import HGD; print('HGD installed successfully!')"
+   python validate_installation.py
    ```
+   
+   This will check that everything is properly installed and working.
 
 4. **(Optional) Set up pre-commit hooks for development:**
    ```bash
@@ -95,10 +97,20 @@ The simulation parameters are stored in the JSON5 file. Default parameters are a
 
 ## 💡 Example Simulations
 
-HGD includes several example configurations:
+HGD includes several example configurations. Start with the quickest one:
+
+```bash
+# Quick validation (10 seconds)
+python HGD/main.py json/minimal_test.json5
+
+# Simple examples
+python HGD/main.py json/collapse.json5  # ~1 minute
+python HGD/main.py json/hopper.json5    # ~2 minutes
+```
 
 | Example | Description | Runtime |
 |---------|-------------|---------|
+| `minimal_test.json5` | Installation verification | ~10 sec |
 | `hopper.json5` | Material flowing through a hopper | ~2 min |
 | `collapse.json5` | Column collapse under gravity | ~1 min |
 | `footing.json5` | Load bearing capacity test | ~3 min |

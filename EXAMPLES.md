@@ -14,6 +14,7 @@ This document describes the example simulation configurations included with HGD.
 
 | Example | Difficulty | Runtime | Description |
 |---------|-----------|---------|-------------|
+| `minimal_test.json5` | ⚡ Quickest | ~10 sec | Installation verification |
 | `hopper.json5` | ⭐ Easy | ~2 min | Material flowing through a hopper outlet |
 | `collapse.json5` | ⭐ Easy | ~1 min | Column collapse under gravity |
 | `test_slope.json5` | ⭐ Easy | ~1 min | Slope stability test |
@@ -23,6 +24,29 @@ This document describes the example simulation configurations included with HGD.
 | `temperature.json5` | ⭐⭐⭐ Advanced | ~5 min | Thermal effects in granular flow |
 
 ## Beginner Examples
+
+### 0. Minimal Test (`minimal_test.json5`) ⚡ FASTEST
+
+**What it simulates:** Ultra-simple test to verify HGD installation.
+
+**Key features:**
+- Smallest possible grid for fast execution
+- Very short simulation time (0.5 seconds)
+- No video generation (doesn't require ffmpeg)
+- Perfect for testing installation
+
+**Run command:**
+```bash
+python HGD/main.py json/minimal_test.json5
+```
+
+**Expected runtime:** ~5-10 seconds
+
+**Output:** Just PNG images in `output/minimal_test/`
+
+**Purpose:** Quick validation that HGD is installed and working correctly.
+
+---
 
 ### 1. Hopper Flow (`hopper.json5`)
 
@@ -408,9 +432,10 @@ save_inc: 50,   // Save every 50 timesteps
 ## Tips for Choosing Examples
 
 **New to HGD?** Start with:
-1. `collapse.json5` - Simplest example
-2. `hopper.json5` - Shows boundary conditions
-3. `test_slope.json5` - Another simple validation
+1. `minimal_test.json5` - Fastest verification (10 seconds)
+2. `collapse.json5` - Simple physics example
+3. `hopper.json5` - Shows boundary conditions
+4. `test_slope.json5` - Another simple validation
 
 **Interested in segregation?** Try:
 - `collapse_bi.json5`

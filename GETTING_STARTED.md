@@ -84,7 +84,26 @@ This command will:
 
 **Note:** The installation may take a few minutes as it compiles C++ code and downloads dependencies.
 
-### Step 3: Set Up Pre-commit Hooks (Optional, for developers)
+### Step 3: Verify Installation
+
+Run the validation script to check everything is working:
+
+```bash
+python validate_installation.py
+```
+
+This script checks:
+- ✓ Python version (3.9+)
+- ✓ Required packages (numpy, matplotlib, scipy, etc.)
+- ✓ HGD package installation
+- ✓ C++ extension compilation
+- ✓ Optional tools (ffmpeg for videos, CMake)
+
+If all checks pass, you'll see: **✅ SUCCESS! HGD is properly installed and ready to use.**
+
+If any checks fail, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions.
+
+### Step 4: Set Up Pre-commit Hooks (Optional, for developers)
 
 If you plan to contribute to HGD development:
 
@@ -106,9 +125,30 @@ python -c "import HGD; print('HGD installed successfully!')"
 
 If you see "HGD installed successfully!" then the installation worked.
 
-### Run a Test Simulation
+### Run a Quick Validation
 
-Try running one of the built-in test cases:
+Try running the minimal test simulation (takes ~10 seconds):
+
+```bash
+python HGD/main.py json/minimal_test.json5
+```
+
+This should:
+- Complete in ~10 seconds
+- Create output in `output/minimal_test/`
+- Generate PNG images of the simulation
+
+Check the output:
+```bash
+ls output/minimal_test/
+# Should show: nu_000000.png, nu_000010.png, etc.
+```
+
+If you see PNG files, congratulations! HGD is working correctly. 🎉
+
+### Run Unit Tests (Optional)
+
+For developers, you can also run the test suite:
 
 ```bash
 python test/test_operators.py
