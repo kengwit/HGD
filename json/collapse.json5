@@ -21,6 +21,7 @@
 
     inertia: [true, false],
     // inertia: false,
+    defined_time_step_size: 1e-3,  // required when inertia is true
     
     plot : ['nu'],
     videos : ['nu'],
