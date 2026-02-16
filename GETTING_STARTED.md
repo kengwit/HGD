@@ -297,7 +297,7 @@ For a complete list with defaults, see `json/defaults.json5`.
 
 **Problem:** "No module named 'HGD'"
 ```
-Solution: Make sure you ran 'pip install -e .' from the HGD directory
+Solution: Make sure you ran `pip install -e .` from the HGD directory
 ```
 
 **Problem:** "CMake Error" or "C++ compiler not found"

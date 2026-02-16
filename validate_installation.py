@@ -12,6 +12,9 @@ Usage:
 import sys
 import subprocess
 import importlib
+import os
+import tempfile
+import json5
 
 
 def print_header(text):
@@ -94,9 +97,6 @@ def check_cpp_extension():
 
 def run_minimal_test():
     """Try to run a minimal simulation"""
-    import os
-    import json5
-    
     # Create a minimal test configuration
     config = {
         "nx": 10,
@@ -112,10 +112,10 @@ def run_minimal_test():
         "save_inc": 100,
     }
     
-    # Write temporary config
-    test_dir = "/tmp/hgd_validation_test"
+    # Write temporary config using cross-platform temp directory
+    test_dir = os.path.join(tempfile.gettempdir(), "hgd_validation_test")
     os.makedirs(test_dir, exist_ok=True)
-    config_path = f"{test_dir}/test.json5"
+    config_path = os.path.join(test_dir, "test.json5")
     
     with open(config_path, "w") as f:
         json5.dump(config, f)
