@@ -86,22 +86,15 @@ This command will:
 
 ### Step 3: Verify Installation
 
-Run the validation script to check everything is working:
+Run a simple test to check everything is working:
 
 ```bash
-python validate_installation.py
+python -c "import HGD; print('HGD installed successfully!')"
 ```
 
-This script checks:
-- ✓ Python version (3.9+)
-- ✓ Required packages (numpy, matplotlib, scipy, etc.)
-- ✓ HGD package installation
-- ✓ C++ extension compilation
-- ✓ Optional tools (ffmpeg for videos, CMake)
+If you see "HGD installed successfully!" then the installation worked.
 
-If all checks pass, you'll see: **✅ SUCCESS! HGD is properly installed and ready to use.**
-
-If any checks fail, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions.
+You can also run a quick simulation test (see below).
 
 ### Step 4: Set Up Pre-commit Hooks (Optional, for developers)
 
@@ -249,7 +242,7 @@ python HGD/main.py json/hopper.json5
 python HGD/main.py json/test_slope.json5
 ```
 
-For descriptions of all available examples, see [EXAMPLES.md](EXAMPLES.md).
+For descriptions of all available examples, see the [Examples Guide](examples.md).
 
 ### Create Your Own Simulation
 
@@ -332,7 +325,7 @@ Solution: Check that the 'plot' and 'videos' parameters are set in your JSON fil
 Solution: Reduce grid resolution (nx, ny, nm) or increase system RAM
 ```
 
-For more detailed troubleshooting, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+For more detailed troubleshooting, see the [Troubleshooting Guide](troubleshooting.md).
 
 ## Getting Help
 
@@ -342,7 +335,7 @@ For more detailed troubleshooting, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 
 ## What's Next?
 
-- Read [EXAMPLES.md](EXAMPLES.md) to understand available example scenarios
+- Read the [Examples Guide](examples.md) to understand available example scenarios
 - Explore the [API Reference](https://benjym.github.io/HGD/reference) for advanced usage
 - Check out published papers using HGD in the `papers/` directory
 - Join the community chat for questions and discussions

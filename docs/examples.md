@@ -453,8 +453,8 @@ save_inc: 50,   // Save every 50 timesteps
 
 ## Need Help?
 
-- See [GETTING_STARTED.md](GETTING_STARTED.md) for installation help
-- See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for common issues
+- See the [Getting Started Guide](getting-started.md) for installation help
+- See the [Troubleshooting Guide](troubleshooting.md) for common issues
 - Check [defaults.json5](json/defaults.json5) for all available parameters
 - Contact the development team via [Matrix chat](https://matrix.to/#/!UZnyhaLhQymfFbLJYI:matrix.org?via=matrix.org)
 

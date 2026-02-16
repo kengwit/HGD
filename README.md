@@ -8,7 +8,7 @@ A Python package for simulating the motion of granular materials as a result of 
 
 ## 🚀 Quick Start
 
-**New to HGD?** Follow our comprehensive [Getting Started Guide](GETTING_STARTED.md) for step-by-step installation and your first simulation.
+**New to HGD?** Follow our comprehensive [Getting Started Guide](https://benjym.github.io/HGD/getting-started) for step-by-step installation and your first simulation.
 
 **Already installed?** Try running an example:
 ```bash
@@ -62,10 +62,8 @@ brew install python cmake libomp
 
 3. **Verify installation:**
    ```bash
-   python validate_installation.py
+   python -c "import HGD; print('HGD installed successfully!')"
    ```
-   
-   This will check that everything is properly installed and working.
 
 4. **(Optional) Set up pre-commit hooks for development:**
    ```bash
@@ -89,9 +87,9 @@ The simulation parameters are stored in the JSON5 file. Default parameters are a
 
 ## 📚 Documentation & Resources
 
-- **[Getting Started Guide](GETTING_STARTED.md)** - Complete installation and first simulation walkthrough
-- **[Examples Guide](EXAMPLES.md)** - Detailed description of all example scenarios
-- **[Troubleshooting](TROUBLESHOOTING.md)** - Solutions to common problems
+- **[Getting Started Guide](https://benjym.github.io/HGD/getting-started)** - Complete installation and first simulation walkthrough
+- **[Examples Guide](https://benjym.github.io/HGD/examples)** - Detailed description of all example scenarios
+- **[Troubleshooting](https://benjym.github.io/HGD/troubleshooting)** - Solutions to common problems
 - **[API Documentation](https://benjym.github.io/HGD/)** - Comprehensive code reference
 - **[Default Parameters](json/defaults.json5)** - All configurable parameters with defaults
 
@@ -116,7 +114,7 @@ python HGD/main.py json/hopper.json5    # ~2 minutes
 | `footing.json5` | Load bearing capacity test | ~3 min |
 | `temperature.json5` | Thermal effects in flow | ~5 min |
 
-See [EXAMPLES.md](EXAMPLES.md) for complete descriptions and usage instructions.
+See the [Examples Guide](https://benjym.github.io/HGD/examples) for complete descriptions and usage instructions.
 
 ## 🔍 Viewing Results
 
@@ -161,7 +159,7 @@ See `json/defaults.json5` for all available parameters.
 
 ## ❓ Troubleshooting
 
-**Installation fails?** Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for solutions to common issues:
+**Installation fails?** Check the [Troubleshooting Guide](https://benjym.github.io/HGD/troubleshooting) for solutions to common issues:
 - C++ compiler not found
 - CMake errors
 - OpenMP missing
