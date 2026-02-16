@@ -1,0 +1,35 @@
+{
+    // SIMPLE QUICK TEST EXAMPLE
+    // This is a minimal configuration for testing HGD installation
+    // Expected runtime: ~10-20 seconds
+    // Purpose: Verify HGD is working correctly
+    
+    // Small grid for fast execution
+    nx : 20,  // horizontal cells
+    ny : 20,  // vertical cells
+    nm : 10,  // number of internal states
+    
+    // Simple geometry
+    H : 1,  // height (m)
+    
+    // Basic material properties
+    repose_angle : 30,  // friction angle (degrees)
+    gsd_mode : 'mono',  // single particle size
+    s_m : 0.001,  // particle size (m)
+    
+    // Initial condition: column of particles
+    IC_mode : "column",
+    nu_fill : 0.5,  // packing density
+    fill_ratio : 0.5,  // fill half the domain
+    
+    // Short simulation time
+    t_f : 1,  // simulate for 1 second
+    
+    // Minimal output
+    plot : ['nu'],  // only plot density
+    videos : ['nu'],  // only create density video
+    save_inc : 10,  // save every 10 timesteps
+    
+    // Fast motion model
+    motion_model : 'd2q4_cpp',  // use fast C++ version
+}

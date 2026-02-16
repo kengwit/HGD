@@ -16,5 +16,8 @@ markdown_extensions:
   - markdown_include.include:
         base_path: json
 nav:
-  - index.md
-  - reference.md
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Examples: examples.md
+  - Troubleshooting: troubleshooting.md
+  - Reference: reference.md
